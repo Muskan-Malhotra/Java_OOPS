@@ -1,0 +1,151 @@
+package classesobjects;
+ 
+public class Employee {
+
+
+    private int empid;
+    private String empname;
+    private double salary;
+    private int deptno;
+
+
+
+
+//    public Employee() {} 
+
+
+    public Employee(int empid, String empname, double salary, int deptno) {
+        //super();
+        System.out.println("Parameterized Employee constructor called..");
+        this.empid = empid;
+        this.empname = empname;
+        this.salary = salary;
+        this.deptno = deptno;
+
+
+    }
+
+
+
+
+
+    public String getEmpname() {
+        return empname;
+    }
+
+    public void setEmpname(String empname) {
+        this.empname = empname;
+    }
+    public double getSalary() {
+        return salary;
+    }
+    public void setSalary(double salary) {
+
+        if(salary > 0)
+        {
+          this.salary = salary;
+        }
+        else
+        {
+            System.out.println("Slary can't be 0 or less than 0");
+        }
+    }
+    public int getDeptno() {
+        return deptno;
+    }
+    public void setDeptno(int deptno) {
+        this.deptno = deptno;
+    }
+    public int getEmpid() {
+        return empid;
+    }
+
+
+    public void displayEmp()
+    {
+        //this
+        System.out.println("employee details:"+this.empid+","+this.empname+","+this.salary+","+this.deptno);
+        //System.out.println(empid+","+this.empname+","+this.salary+","+this.deptno);
+    }
+
+
+    public double calcAnnSal()
+    {
+        return this.salary * 12;
+    }
+
+    //function overloading  - static/compile time polymorphism
+    public double calcAnnSal(double bonus)
+    {
+        return (this.salary * 12)+bonus;
+    }
+ 
+    
+
+ 
+}
+package classesobjects;   public class Clas... by Namrata Marathe (Guest)
+Namrata Marathe (Guest)2:20 PM
+package classesobjects;
+ 
+public class ClassesObjectsApp {
+ 
+    public static void main(String[] args) {
+
+
+        Employee e=null; //e is reference of type Employee - object reference
+
+        e = new Employee(1,"Anubhav Sinha",15000,10);
+ 
+        //System.out.println(e);
+        /*
+        System.out.println(e.getEmpid());
+        System.out.println(e.getSalary());
+        System.out.println(e.getEmpname());
+        */
+
+        e.displayEmp();
+ 
+        
+        Employee e1 = new Employee(2,"Raj Malhotra",25000,10);
+
+            /*
+        System.out.println(e1.getEmpid());
+        System.out.println(e1.getSalary());
+        System.out.println(e1.getEmpname());
+        */
+        e1.displayEmp();
+ 
+        System.out.println("remaining program continues..");
+
+
+        //encapsulated (private) can't access directly
+        //e1.empid =-1;
+        //e1.salary=0;
+
+          e1.setSalary(0);
+          e1.displayEmp();
+        //e1.empid = 9;
+
+          e1.setSalary(1000);
+          e1.displayEmp();
+
+
+         double annsal =  e1.calcAnnSal();
+         System.out.println(annsal);
+
+        // System.out.println(e1.calcAnnSal());
+
+
+            Employee e3 = new Employee(3,"Paras Joshi",10000,20);
+
+            annsal = e3.calcAnnSal(5000);
+             System.out.println(annsal);
+
+
+            // Employee e4 = new Employee(e3);
+ 
+    }
+ 
+}
+has context menu
