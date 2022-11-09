@@ -124,6 +124,14 @@ public class Employee {
         return this.empid == ((Employee)obj).empid;
     }
     */
+    //for arraylist
+    @Override
+    public boolean equals(Object obj)  //obj = e2
+    {
+//    	if(obj instanceof Employee)
+    		return this.empid == ((Employee)obj).empid;
+    	
+    }
 
  
 }
