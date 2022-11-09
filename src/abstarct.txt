@@ -1,0 +1,69 @@
+overide the methods in abstract class.
+Promote common behaviour.
+Abstract class don't have instance of its own.
+Coz then abstarct methods are called. then jvm feels which body to execute. to avoid the situation it tells to not create a project.
+
+Abstarct class means something is incomplete.
+
+
+Class is marked as abstract?
+Because it has one or more abstract methods.
+thats because it gives a compiler error.
+Class abstarct can't create an instance.
+
+
+any overloaded constructor can be invoked with super can be used with the signature.
+
+is a relation means we are talking about subclass.
+can I have a class abstarct with all methods having body.
+Its possible.
+
+_______________Interface__________________
+it is a delegate(pass on karna)
+It has all methods abstarct thats the difference between the two.
+It outlines the features but don't provide implmentation.
+Functionalities ke features ko outline karta hai.
+It only speaks about what and not how.
+It needs a seperate class that implements interface.
+then overrride the methods.
+Eg; mobile data has the different facilities.
+It does not provide implementation--> we get a subsriper like airtel or vodafone.
+
+Diff classes can sum up and provide the implementation.
+from javva 8 they have default or static methods and then only can have a body to it.
+
+final static is a constant Needs to initialze it at the sam etime.
+
+By default its public and abstract in methods.
+In abstract need to mark explicitly.s
+
+extend and interface has is a relationship.
+runtime poly can
+
+Important overide rule.
+can have same or wider acess modifiers.
+
+feature chd ke baaki chezein hai toh abstract banao nahit oth interface.
+interface helps to promote loose coupling.
+Always use interface design wise wherever necesaary.
+
+Quiz===========================================
+when casting always use instanceof for check.
+
+final class can't be inherited.
+String clas si final and the wrapper class.
+
+protected is accesable only as inherited method.
+package mein dhundega sabse pehle class ko.
+
+default walla alag package mein accessible nahi hoga.
+trim removes spaces from left and right side.
+
+compiler error pe line likhn ek ebaad red line aati hai.
+Run tym error onsole pe dikhti hai.
+
+____________________Arrays___________________-
+Arrays are treated as an object in Java.
+
+try cat be followed by either cath , finally or both.
+

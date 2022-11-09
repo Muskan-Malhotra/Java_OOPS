@@ -1,0 +1,74 @@
+Group id: package name
+..similar types of java project in same group
+Can group multiple projects in one group.
+Name is atrifact id. Artifact id is always unique.
+
+Artifact means project or specimen or cheez is artifact.
+group id: jo bana rahe hainuske liye common group id.
+
+jab pura ready ho jata hai project toh snapshot nahi full version banaeyenge..
+or wese snapshot version.
+
+Version is very important.
+
+Maven project structure is a bit different than the other one.
+
+Ek functio ki bhi testing is unit testing.
+
+Jira tool :: bug reporting tool.
+J unit library
+
+Jar file jo maven mein hoti hain wo jar externally add karne ki zarurat nhi hai..
+
+Pm mein added hai hogi jar files.
+pom.xml mein jaar files hoti hain.
+maven is a project build tool.
+POM _--> Project Object Model.
+
+
+By default maven central repositiories hoti hain.
+Transitive dependancy; a dependant on b dependant on c.
+
+If compiler outputs are not visible toh ..
+clear then resrces
+target
+test
+testcompile
+
+
+surefire  plugin.._> if we know or don't know testing.
+ or phir jar file ban gyi target folder mein.
+
+clean hoga or test files bhi compile nahihogi.
+maven build me target folder delete karn aho toh.
+
+mirror maven : used to redirecct all traffic to a specific repository URL and block everything else.
+
+when creating file toh development profile.
+or jab deploye karnege toh production  mode profile mein kaam karenge.
+
+mvn commands:
+mvn source se pehle compile karna zaruri hai!!
+1) compile your java src code files to .class file and create  jar frm it 
+mvn compile (java source code ko _> class mein compile)
+2) compile your test src  code files to .class files and create test jar out of it.
+mvn test-compile : test-> test.class compile test files.
+mvn jar:test-jar
+
+3)create a jar out of src/java src code files
+mvn source ke do plugin:
+mvn source : jar (Java ke source code ki jar banegi)
+
+4) create a test-jar out of src/test src code files.
+mvn source: test-jar(test source code -jar)
+
+
+bina mvn compile kiye mvn src ko fark nhi pdega but mvn jar comd 
+mvn jar : jar (compiled java .class file ki jar banata hai) isliye mvn compile bolna zaruri hai fir hum mvn jar:jar bol sakte hain.
+
+mvn jar:test-jar(compiled test class file unki jar banegi)
+
+1) compile karo jar banao
+2) test ko compile ki uska jar banao
+3) sourcce code ka jar
+4) test ka jar banana hai. 

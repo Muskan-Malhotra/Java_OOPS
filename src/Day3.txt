@@ -1,0 +1,60 @@
+compiler calls the tostring method. It shows the hascode value ]. To string return the string represtation of the obj.
+
+getclass() gives associated name.
+In order to print the property value of the object: 
+
+In java we mostly use toString(){
+
+
+Is a relationship: employee refrence Emp pointing to emolyee or pointing to manager obj
+
+derived obj can be derived to base.
+super reference can pt to subcalss obj.
+
+sub class is a super class. coz all properties are there.
+vice versa can't be posible.
+
+in order to overide it needs to be inherited first.
+
+private methods cannot be overriden.
+Those methods that are visible can be overriden.
+
+final modifier: can't be overiden.
+When something is final. then we can't overide it.
+class lvl final can't extent that class.
+not available for modification.
+
+string is already final in java.
+All methods in string class is final.
+concat, toupper, to lower case.
+
+nobody sould midfy it is the req then final is required.
+
+one initiliase it final var can't be modified.
+
+final static is taken as a compile time constant.
+static always used in class.
+final static needs to be initialised then an there!
+
+for compile time const always in caps.
+
+Is a relation is checked by: 
+
+parent type refrence always for compile time polymorphism
+
+
+Even if single abstract is there then mark it as abstrac class;
+
+Abstract refrence is allowed.
+Can't instantiate the abstract class.
+Abstract class ka obj nhi bana sakte.
+Inheritance ke liye toh available hai!!
+
+for compilaton purpose we used @override.
+
+
+
+
+
+
+

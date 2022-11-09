@@ -1,0 +1,80 @@
+jdbc:
+
+
+when scrolling
+when sumbody inserted a new row in the table. when scrolling the table has 6 rows. but as of now you have 5 rows. 
+
+three result set type:
+
+forward only:
+
+if scroll insenstive: not reflect the changes in the resultset.
+scroll karo all 5 rows and for the same connection fire the same query again and then now it is 6 rows.
+The change won't be visible in the result set.
+
+scroll sensitive means can scroll in forward and backward direction:
+all changes are reflecting.
+we are in 4th row and someone changed at the back.
+Any chng in the base table automatically becomes visible in the result set.
+Now no need to fire the query again and again.
+
+
+Concurrency:
+arguments that the resultset method takes!!
+
+when empty statement that means we use only forward only resultset.
+
+when we need a different type:
+overloaded create statement is used:
+ag1 : resultset type(Scroll insensitive, and sensitive)
+arg2: cocurrency(It means multiple users are accessing table at the same time.
+
+connextion1 is trying to fetch a table content of id 5 and this is needed by conc2 as well.. so here the concurrency is handled:
+ek agar read kar raha hai toh Write nhi hoga.
+write ho rha hai toh read nhi hoga.
+jab write karte hain toh it will lock the row.
+
+read ke liye there is no locking. jab tak lock hai toh read bhi kar payenge.
+multiple people can read at the same tym.
+
+db server handles all these things.
+db is not just a passive storage but it has server as well.
+
+in resultset when we fire a db query we have to look out for the concurrency.
+
+2 type of concurrency:
+which type of resultset _ getconcurrency() method
+
+concur readonly: can only read dtaa cannot update it.
+concur updatable: can also the resultset and it will update the underline table also.
+
+get type () is used to get the type of resultset.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Transaction isolation level - set for db
+
+Transaction: deposite or transfer money is transaction.
+
+Atomicity means yah toh transaction ho yah bilkul bhi na ho!!
+Means treat it as a single statement.
+
+DML: insert update delete
+DDL: they get commited alter and all these things.
+
+set autocommit true: har statement ke baad commit hoga.
+jab tak commit nhi bolenege tab tak db mein reflect nhi hoga.
+
+when connection start till we commit yeh transaction ki boundary hai.
+commit to commit ki bhi transaction ki boundary hoti hai.
+
+roll back changes honge both the upodated statements ka.
+jab changes permanent hogye commit ho gye toh rooll back nhi ho payenge..'commit in between mat karo..
+multiple statements ke baad chahte ho toh ki yeh ek statement ki tarah count ho.
+
+fresh connection hai toh do update and then commit.
+if single transc hai toh synchronisation handles the concurrency
+
+Transaction handling is for the concurrencytable taki changes ho toh rollback ho entirely with the db table.
+
+code and db concurrecny is diff.
+

@@ -1,0 +1,21 @@
+Stream function:
+Written element one by one. on every element we call some function in return.
+
+Stream will convert to elements one by one.
+Process every element of that list.
+after stream if filter tnem for every element in that string.
+
+java.util.stream package!!
+list is an implementation.
+It return the object of that class that implements string interface. It denotes seq of elements. Seq operations and segregate operation.
+Seq operation one after the other.
+filter is used to filter data using a certain conditon..
+the criteria is the 
+Employee type hai list ka toh one by one onj return karega. or har ek employee pe call hoga and then x ko assign ho jayega..
+For each mein x define karega har obj ko.
+stream ke baad ke jitne func honge wo list ke har ek element pe operate hoga.
+
+predicate is a functional interface!!
+filter function mein esa labda function that return boolean value.'
+if true toh x elemetn agge pass hoga.
+if condition is false toh wo aage nhi jayega

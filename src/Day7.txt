@@ -1,0 +1,89 @@
+Multiprocessing very old as compared to mutlithreading.
+Mutlithreading is much faster.
+Maintaing a process is more hectic. stack associated with that process needs to store all resources.
+Switching between process ke liye data ko store karna parta hai stack pe or uss context ko save karna padta hai.
+
+It needs to keep the track of the resouces while switching.which is context switching.
+
+Switching between thread is esy .coz it shared the same memory location. It belongs to the entire program that is why it is faster.
+The local var in the run method is indpendant from each thread. 
+context switching takes longer time as compared to thread switching. Intercommunication is easy in thread as comp to processes.
+
+Instance data is shared and local var create kardo is needs it independant. or once the run mehod completes the local var die.
+Memory sharing costlier and 
+
+Priemptive constructor hai jo process ki nhi sunta or switch kar deta hai.
+
+Thread class ka constructor overide karta hai to create thred.
+next mthod is to use runnable interface and then overide run() method.
+
+threadgrp when there are multiple threads and we need to give same property.
+
+..........Lifecycle of thread.........
+from the creation till it gets over.
+run():When the thread is created. Or instantiated.
+start(): brings the thread into a runnable condition.
+running():when it is brought the cpu.
+when the run() is over then can't restart the thread.
+jvm decides which thread to pick. dispatcher gets thread to ready state.
+sleeping,waiting,suspended,blocked is blocked state only.
+sleep se wapis anne ke baad wo ready state mein jaate hain...or wahi thread bachi hogi toh scedular sirf usse uthayega or wahi dikhayega.
+sleep meants khud se jag jayega
+
+wait and notify is for intercoomunication.
+It is used for synchronisaton purpose in threads.
+Some other thread need to notify ki wait se bahar aja.
+
+
+As developer always think about future perspective.
+thread jo runnable implement karta hai wo kisi or class ko extend karne ka moka deta hai.
+if class extends from thread class toh getname bol sakte hain
+
+agar runnable method use karoge toh this.getname nahi bol sakte.
+toh current thread ka refrence thread.current thread method name dega.
+isalive() gives boolean value;
+join t2 use kiya within t1.
+jab tak kaam t2 ka khatm nhi hota tab tak t1 waits.
+t2 ko join karo t1 
+jismien join hoga wo thread wait karega. jav t2 ki processing complete hogi tab t2 join karega na..
+like you having lunch with manager.
+
+yeild is asking other thread to give a chance. Thread is itself req to remove it and then give chance to another thread. 
+It may happen ki ready pool mein jaane ke baad firse use chance mil jaye and it may or may not happen.
+Yield is an indirect way of asking it. 
+
+Account ka ibj share nhi hoga toh synchronization nhi hoga.
+
+Inside run r1 and r2 se jo negative balance araha tha toh uska solution hai synchronized kardo method.
+
+With every obj for synchronization purpose it has kept a unie lock, har obj ke paas apna ek unique lock hai. Har instance ko apna lock hai.
+
+Agar kisi method ko proceed karna hai toh usse lock chahiye hoga. When it exits the synchrozed method tabhi unlock hoga.
+runnable r2 jab acc withdaraw bolwga toh usse wait karna padega kyuki uske paas account instance nahi hai.
+
+That look is now available. toh uske baad wo withdraw method ko call karega. 
+Jab dusri thread ayi withdrawale ke baad ab usse updates amt check hoga.
+iske beech mein context switching nhi hoga amt deduction next thread run mein.
+
+Even in case of sleep tab bhi context switch nhi hoga.
+Synch nhi tha toh dono thread one after another a jate the mthod mein. 
+
+Ab pura kaam hoga tab next thread hogi. Ab r1 lock leke sleep pe chali jaygi. r1 sleep se bahar ayegi deduction karegi or complete karegi synch ka method and then release karegi lock or r2 ko lock degi taki wo kaam kar sake;
+
+withdraw method ke under mein parallel execution nhi hoga.
+Instead of synchronizing thr method lets add synchrize lock taki hum ek particular block wise lock laga dein.
+
+wait lock leke nhi osta jese hi wait methos call hogi wo release akr degi call.
+taki first waiting thread abahar ajaye waiting state se.
+
+
+
+Wait anf notify @@@@@@@@@@@@@@@@@@@@@@@@
+
+waiter 1 jub synchronised block mein jayega..toh lock leke jayega or wait karega or lock release kar dega.
+ab wo lock waiter2 ko milega or wo bhi wait me chzla jayega or release kar dega lock ko.
+ab yeh lock notifier ko milla jisne apna notify method chalaya jisse koi bhi ek waiter jab jayega or message print kar dega..
+
+ab agar yahan notify all hota toh jab notifier ko lock milla tha wo notify all method ko call kar dega or dono jag jayenge par lock ek ke hi pass rahega.
+toh jab ek ko lock milega uska pura method chalega phir lock release hoga or dusre ko milega or wo apna method chal ke lock release kar dega.
+par dono msg print kar denge

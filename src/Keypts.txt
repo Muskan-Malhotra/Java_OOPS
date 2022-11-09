@@ -1,0 +1,51 @@
+notes for key points
+
+//	@Override
+//	public boolean equals(Object o) {
+//		//needs to typecast coz AccNo is not in Object Obvio!
+//		return this.AccNo == ((Acc)o).AccNo;
+//	}
+
+When the equals is and is not overiden
+//when equals is not overriden --> false
+		System.out.println("Steve is present or not? "+present);
+		
+		
+		boolean present2 = ac.contains(new Acc("Noel Shaw",103,10000)); //when equals is overriden --> true
+
+1) Equals of the object class is used to check whether it the object element of a different class is contained or not.
+
+Equlas needs to be overriden only when we are creating our own elements with objects from a class.
+
+__________________________________________________
+There is a difference between comparable and comparator.
+When we need to sort something on more than one basis.
+comparable se ek hi baar sort ho skata hai ek hi type pe.
+but comparator se differnet cases mein use ho sakta hai..
+
+comparable interface is implemented with compareTo() method overriden
+
+comparator interface is implemented with compare() method overriden.
+By default the return type is double which we need to convert to int as type cast.
+compare also takes two parameters emploee e1 and employee e2.
+
+Type is very important while implementing comparator or comparable.
+
+https://howtodoinjava.com/java/sort/comparable-comparator/#:~:text=Complex%20Comparator%20Comparator%3CUser%3E%20firstNameSorter%20%3D%20%28o1%2C%20o2%29%20-%3E,%28o1%2C%20o2%29%20-%3E%20o1.lastName%28%29.compareTo%28o2.lastName%28%29%29%3B%20Comparator%3CUser%3E%20fullNameSorter%20%3D%20firstNameSorter.thenComparing%28lastNameSorter%29%3B
+
+for reference
+
+Whenever there is an error in this line:  sst.add(e1);
+the check for files which file has been provided for objects
+
+Error: must override super method means type not provided in the implementation <ACC> within angular brackets.
+
+ Exception : java.lang.ClassCastException :: do check if the class is may be wit the same name and you are making changes in some other class. in some other package.
+
+
+when casting type casting not done properly..
+Yah run method call kiya bina runnable implement karaye uss class pe.
+_______________ Getter and Setters ________________
+Getters and setters wahan use hote hai jis class mein variables ki declare and defined anhi hote and humein unki values chahiye hoti hai kisi or class mein!
+
+Toh unki value set yah display karne ke liye hum constructor walli class ka object bana ke getter and setter call kar dete hain!!

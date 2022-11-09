@@ -1,0 +1,45 @@
+Project details:
+Faculty main enu and faculty details and for searches sub menu.
+listing in sub menu.
+
+List course details and search:
+hashmap and containment.
+
+-----------------Java 8--------------------
+In java 8 we have the static and default in interface.
+Abstarct methods need to override.
+Static method can be used in interface.
+Default methods are for utility.
+Jiski implmentation change nhihogi.
+Or else just have interface with only abstract method.
+
+Function which is implemented inside multiple statements.
+
+//lambda function/lambda expression
+
+(arg1,arg2) -> {
+stat1;
+stat2;
+java block
+
+return val;
+}
+
+coding a function in java
+//lambda function syntax
+(arg1) -> stat1;
+
+In the cases when we need to overide a mthod in an interface where there is only one abstract method inside it.
+
+When we need to overide the same emthod we can direclty do it with lambda expression.
+
+
+//all becoz of lambda
+		//class ban jayega
+		or method override ho jayegi
+		instance will be created as well
+
+
+
+
+

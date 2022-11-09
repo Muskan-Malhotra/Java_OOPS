@@ -1,0 +1,79 @@
+generalized methods that has functions.
+Giving types is generic.
+add(E),remove(E),size(),contains(E),clear()
+genrics : the type of the element.
+Type of the collection was not possible before java 5.
+Collection is supposed to have similar type of data type.
+Compiler stops to add any other type than defined.
+every compiler eeror is not bad.
+Coz issue is created at the run it is good to understand the and correct the code beforehand.
+JVM error is much hectic than the compiler error. Which can be corrected at the same time.
+Compiler error is kinf of helps from exception of jvm errors.
+
+will lst(6,10) having 4 elements in the arraylist will give index outof bound error
+set and  add is differnet: set means to replace value and the value need to be present. so it will give error.
+
+how does contains check if element is present or not: linear search se for integers.
+Equals methos is used to compare. for Int
+toString is overiden,
+When there is an object.: equals ko override nhi kiya toh it gives false.
+Equals yahan obj class call ho jayega. Or wo obj class equal method mein same memory loc ka bolega.
+
+but wehen we overide the equals method in the obj class.
+Signature very imp hai. public boolean equals(Object o)
+
+Random  insertion and deletion is faster in LL
+Hashiing is used to reduce the number of seraching.
+While storing it is stored in buckets and then there is a specific hash key.
+
+Hash code method is overwridden. here also comparison happens with equals. It will ensure no duplicacy is there.
+
+First call hascode to find the bucket
+to add eements then check for duplicacy and then only add the element in the bucckets.
+
+add and contains is different.
+duplicate add nhi karne dega but contains sirf compare karega.
+
+set mein add karte time wo search karta rahega..number of comaprisons will be drastically reduced.
+Hashcode overide nhi kiya toh 
+object hashcode value will have differnet memeory loc and then every duplicate employee ka bhi diff hashcode hoga.
+or wo duplicacy pe false dega isiliye do baar raj malhotra add hogye..
+
+nothing tp comp and simply putting in 4 different buckets.
+same bucket mein elemns honge toh compare honge or id duplicate hogi.
+chaaron ki jhscode waali vlaue alag ayi oth chaaron ko lag buckets mein add kar diya.
+
+ordered: need not means sorted.
+means a sequence is followed
+sorted means orderd.
+
+hashset is not sorted nor ordered
+AL is ordered not sorted
+
+________Treeset_________
+sorted set interface. is used.
+lower case and uppercase is compared accordingly..its case sensitive.
+duplicacy not allowed
+Employee pe sorting not working coz comparable class of java.lang nhi chala.
+
+Compareto swap the prev with next;
+if prev-next is negative means prev is smalle rtha next;
+
+if hashing so sorting will be done inside bucket.
+comparto is a part of coparable interface.
+implement the comparable interface. and overide the compareto in the employee
+
+so we need to implement it! the comparable interface.
+this.wmpid is prev implicityly passed and next is e.empid passed explicitly.
+
+Now Comparator Interface()
+Abstract methods needs to be overriden.
+convention means which is generally followed.
+Empty constructor comparable dhundega!! sort ke liye.
+
+______________lambda __________________--
+Agar interface mein ek hi method hai toh hi labda se hoga yeh..
+do hua toh nhi use hoga lambda walla
+
+
+

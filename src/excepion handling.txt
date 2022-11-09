@@ -1,0 +1,110 @@
+hierarchy for exception handling
+throwable is in java.lang package
+subclasses of throwable: error and exceptipn.
+(concrete subclasses)
+
+we would prefer to handle exception.
+Error can be handled? yes
+Any thing which is throwable can be ahndled. but error mein not intrusted. Coz It will hang the program Coz errors are fatal.Can't deal with. Can easily be theek.
+
+fatal: out of memory error(garabage collector)utility in java.
+when object is created and jvm invokes garb collector it involes and frees the memeory of unused obj.
+
+2) virtual machine error. 
+
+java.lang subclasses; runtime exception class and its siblings ko chd ke nonruntime or checked exception.
+
+java.lang.runtime.exception subclass arthmatic exception, arrayoutofbound, they come undder the conceptual category of unchecked exception.
+
+why they are called unchecked exception.? No need to handle it. coz they are due to programmer's error. And compiler thinks that the programmer will know on its own.
+
+checked exception needs to be handled: IOException: code is right but we can't garntee ki 51st time chalega and the code is dependant to external things. For eg external data lena.
+
+gracefully handling the exception.
+taking care beforehand.
+
+handing exception with blocks: some resource is opened and make sure to close resrc thne but in finally coz it always run. no matter if exception or no exception. And the jvm tak jata hai or koi catch se nahi hota hai toh jvm phir bhi finally chalta hai.
+
+try without catch and only finally is not possile.'
+
+
+IOException agar catch mein handle nhi hua hai toh compiler check karega ki try ko catch karne walla exception likha hai yah nahi..
+Jo exception deal nhi ki hai toh compiler bolega.
+checked excepiton mein jcm check nhi karega khud se.
+
+IO is a parent of file not found.
+child can't deal with the parent exception.
+add multiple catch blocks for specific exceptions.
+
+Every class type has a specific type of handling.
+generalised info nahi chahiye specific points hi chhaiye.
+or yeh specific class mein hi milegi.
+Issue is the information we get.
+
+parent walla exception pehle likha toh wo handle ho jayega toh uske baad ka koi chalega hi nhi even specific walla bhin hi chalega.(IO wall aparent file ko nhi chalne dega and the file walla code chala hi nhi).
+
+
+rule: handle or declare rule;
+either handle at try catch 
+if not handling then declare it at the function level. 
+mention thorws FIleNotFoundException,IOExcepiton
+Throws is telling compiler that these excptin is being throwed I am not handling it here but has propogated(pass on) that I will handle it in the invokation.
+
+finally ke baad walla skipped ho jayega.
+main ka caller is jvm toh finally the exception will b propogated to jvm agar main mein handle nhi kiya hai toh toh uske baad halt the program by jvm.
+
+throws clause is mandatory for checked exception.
+On the spot we don't want to handle coz may be utne resources nhi hain an al.
+We want to handle it later on.
+
+What is there is a partial exception and adha in catch and adha in caller pe code likhenege.
+
+______________custom exception handling______
+from appplicaton pt of view we can add our own exception class.
+when there is a limit or condition to something.
+need to add a catch block to deal with that situation.
+
+______ArrayList__________
+//lst.toString()  -- tostring() bhi arraylist se call hoga
+		//Interface hai List toh arraylist ke refrence se call hoga jo implement karta hai
+		
+//		packagename.classname@hashcode value yeh tostring method batata hai
+//		Arraylist wallon ne overide kiya hai tostring Method.class
+		
+//		tostring method mein implementatin hai
+
+every collection in java only stores object types and not the primitive type;
+Using wrappr class isse obj types store hote hain.
+
+boxing primitive to obj
+and wise vera is autoboxing
+internally compiler convert add(100) to new Integer(100);
+only onjs are stored inside the collection.
+
+Type is not mentioned thats why kuch bhi AL mein add kar sakte hain.
+
+get method ka default return type obj hoga with caps O.
+Coz type manage nahi kiya hai/
+All wrapper classes overide the toString emthod().
+
+How would contains method works in Al: it would do linear search.
+
+Equality between the object types:
+same object stored in same memoery location:
+== means when obj is actually same means pointing to the same memory;
+
+if the copy is modified but the same is modified in actual thinh;
+== for different point of view is false;
+from application point of view both are same meaningfully;
+they represent same employee in the organisation.
+equals check akrta hai meaningfully same batata hai.
+
+equals bhi false de raha hai. Obj class equals is called.
+toh change karta hai implementation.
+equals method ko oveide karenege taki implementation change ho.
+
+Al ka conatins obj ko equals method se compare karega and then true dega;
+
+jis refrence pe method call kiya hota hai toh usko this refer karta hai.
+
+Objects class equals method works similar to == operator.

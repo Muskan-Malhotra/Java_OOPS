@@ -1,0 +1,217 @@
+for loop 
+we give everything at the start
+
+while loop:
+initialisation at the start
+the increment anywhere.
+
+
+in and out properties of class are static.
+class properties are static.
+scanner is the resource or utility then we need to close the resrc. as it occupies some memory.
+
+
+initialization is imp for local variable.
+
+can't declare static variable inside a function. Cna declare in class.
+
+object and reference varaibles can be declared only.
+Static also has default values if we don't initialize.
+
+
+hasNextInt() --> It will check if the next input you are giving is integer or not!''
+
+nextline return entire line. nd next will take the first line.
+
+
+OOPS: 
+properties remain the same but values differ.
+methods of a class computes and works on properties that is defined in class.
+
+
+for emp id it should only be get and not set.
+all other is getter and setter.
+
+getter return the property value: thtas why void
+setter method allows the to set the property value;
+
+this.empname: refering to the current object.
+get value in local var and set it to the instace variable.
+
+obj or instance variable prefix with this. refering to the current variable.
+
+if an obj is not pointing to anything then initiale as null.
+
+Employee e is the refernce of type employee;
+The red color error is the exception error.
+Exception haults the program at the line itself and npt proceed ahead;
+
+e is not born not pointing to any live obj then calling any method on that reference is always giving exception null pointer exception.
+
+Via this can't access anything.
+
+initialise the refernce with the obj
+e = new Employee(); // left hand side is a constructor
+solves the problem;
+ 
+
+the actual alocation of memory is done by jvm at runtime.
+jvm goes to employee class. find the properties sum empid == 4byte and others add. and free block of 32 bytes and alocate to employee obj.
+
+all obj prop will get default values 
+int = 0
+string = null
+double = 0.0
+
+after this alocation it also intitilizes prop types and then call the constructor and call the new Employee() thing.
+
+when we don't create our constructor. adn then the ccompiler add an empty constructor or default constructor. This is provided only when we don't have any constructor coded in our class.
+ 
+
+compiler did it.
+
+value that empid will display is: 
+at obj creation: allocates memory and adds default value.
+
+to pass values as parameter to the costructor is to initialise the new values to the properties.
+
+the call of the constructor should match the number of arguments.
+//default constructor nikal jayega coz humnein apna constructor provide kar diya hai
+
+
+every constructor has a first super 
+Every class is inherited from Object class O.
+base class memoery ke liye pehle memoery alocate hogi and then implicitley p-resent hote hain. 
+Employee alocate hoga to obj properties ke liye bhi alocation ho jaye.
+to call that base class construcotr. toh super class ka constructor call hoga.
+
+first call is alwsys a super class constuctor call.
+
+so that base class obj propertiesshuld be allocated first.
+
+without super it is implicelty added.
+
+super means immdiate base class. super with empty coz object class mein empty calss ka constructor ka call hua.
+
+agar parameter honge toh parat=metr cinstructor call hoga on its own.
+
+obj names, location is also different and so are the values.
+
+member and normal function are different
+member func are called on an obj refernce and that obj prop is refered directly.
+
+refernce to this onj e.display() is passed implicitly to the display function.
+
+this.emp is nothing but e1.	
+
+objects are different but the properties can be same.
+same refernce can pt to another objects and can be used.
+jab bhi reference pe koi property yah function call karoge. Uss tym pe wo jisko point kar raha hai uske reference koi batayega..jo bhi property yah method hai.
+
+a reference at a time can pt to only one obj.
+
+there is a differnce between a refernce and a obj.
+
+
+Encapsulation
+if we try to asign : e1.empid = -1;
+e1.salary = 0;
+field private hai toh access nahi kar sakte dusri class mein.
+
+private empid nhi hua toh emp id change ho jayega.
+toh encapsulaation karna zaruri ahi private banane pe.
+setter method rkho hi mat.
+
+setter hai or private nhi ahi phir bhi set ho jayega!
+default access spcefire hota hai private or public ke beech mein hota hai if we don't specify anything.
+
+it is visible to other classes but only at the package level. 
+
+add private and add check in setter which is equally imp.
+
+Abstraction; 
+polymorphism: calc salary in multiple ways.
+
+bonus can't be property.
+coz certain employees will only have bonus.
+so solution hai ki prameter mein paass karo.
+
+java mein same function name se kar sakte hain with changing the parameters
+
+signatures are different so can keep the same name.
+and c++ same name nahi de sakte hai.
+
+order pram ka bhi matter karta hai usse bhi function change hota hai or inn sablo function overloading kehte hain --> example of compile time polymorphism. or static
+
+binding of the body happens at xompile time toh compile time pe karte hain. 
+
+doing same thing in slghly diff  way.
+return type may or may not be same.
+
+copy of wmployee e3
+
+Employee e4 = new Employee(e3);
+
+It will do binding with matching constructor having same paramenters.
+
+copy constructor: diff memoery locaion with the same values.
+
+Inheritance:
+
+encapsulation:hides the content and reduces the complexity.
+
+activity diff and funct name is same then bad process.
+
+advantage is reuse the existing code.
+
+
+super of manager calls the3 employee base calss. the employee constructor is called and execute things and then manager constructor is called and then executes and then ends.
+
+even sop can't be first statement before super();
+
+
+overiding is the creating the same method with the change of behaviour.
+
+
+manager ke ldiplasy mein.
+with only display in manager then recursion hi ho jayega
+
+this.dispaly will go for recursion. coz ussi class ka hoga
+super.display() se base class ka use ho jayega.
+
+
+in overiding the signatures are exaclty same.
+arguments, name and everything should be same.
+Modiefier same hona chahiye. for public. yah toh usse wider hona chahiye.
+
+@Overide se compiler overiden method ko point kar dega! khud hi!
+
+Employee ob = new Manager();
+creating a super class reference and pointing to a subclass object.
+
+compile tyme ob = Employee
+Runtime ob is manager
+
+employee mein jayega od display call hoga 
+manager mein binding hoga or overidden hai toh at run tym depenindg upon the manger obj toh run time pe 
+
+
+agar obj ka overiden nahi hai toh employee ki hi hogi toh display walla employee mein hi hai.
+
+agar obj ka display call hai toh manager mein overiden hai toh jvm pe chhod diya ki kise call karega. jo ki baad mein manager ka display cll karega kyuki overiden hai.
+
+late binginf--> function overiding.
+most important hai!!!
+
+
+when cating and runtym walla match toh work
+base class cannot be cated to drive vice vers is possible.
+
+
+instaneof helps to check the object type for manager
+
+b;ue walla ss of instanceof ss in hp 15inch is runtym ploy
+
+
+
+

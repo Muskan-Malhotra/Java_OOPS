@@ -1,0 +1,235 @@
+Java Line is autocomplied! 
+(source code).java -->compile --> .class (byte code)(intermediate language)
+--> when run it--> run machine an executable file is created and execute it online.
+
+.class file is independant --> compiled code is working if they have proper jre!. 
+So jre should be specific to your operating system. Then byte code file is runabble. 
+Jar Utility--> HW
+
+Share file and made changes.. without main app. They want to use it! Group a couple of classes and then create a simple jar file.
+cmd can't run from cmd prompt.
+
+Export and import the file.
+Runnable jar file
+java -jar file_name
+to tun thr runnable jar file.
+
+
+Iska import karne ke liye mam ke projects. 
+Refactor rename --> if the project name is colliding
+
+How to export proj as jar file
+how to run a file from cmd
+importing the files for the project and refactor.
+
+if -jar is not used then:
+java MainApp 
+java invokde jvm and jre that load the mainapp.class file.
+public sttaic is the method with the signature.
+java packagename.classname -- important
+
+java path should be set--> set path cmd mein
+javac package.filename.java
+java packagename.filename bus
+ javac for .class file
+java will run the file.
+
+Can run from cmd--> shpuld include the path.
+to run the code.
+
+at the end of the path set use: %path%
+jdk --> bin walla path
+
+jdk vs jre
+jdk -- > java devlopment kit
+compile the src code
+along with jre libarary
+jar
+javac
+jvm are there
+jdk is the superset of jre
+jre --> si needed only when need to exe or run java program or jar utility.
+jre library and jvm is there.
+just run and not compile.
+
+for developer. need jdk
+for user --> jre
+
+browser has at times only jre. is sufficient.
+platform independant and the reason..the jre walla
+
+java ompiler--> 1.8 java
+in src add main.java
+Create package lang
+
+JVM is highly platform dependant. 
+J2SE = Not linking then jdk is important.
+
+setting path from cmd --> the jdk bin path
+javac package.filename.java
+
+JVM always seraches for the Main method alwasy to un the code.
+We can have many class in a file and only one class should be public and the name should match with file name.
+If 2 public classes are wanted then create a seperate file.
+
+Import
+if we create a string
+String myname = 
+We are using an inbuilt string class.
+If arraylist is used then: AL can't be resolved to a type.
+This needs to be installed. Util package.
+Inbuilt calss in java inside util package.
+JRE has these libraries and packages.
+It searhces for lib in that current package for a class.
+If it is present. 
+But AL class is not present in langfundamentals.
+We can use a import statemnt to incld the package and class name.
+It is used to check the constructor or class is there or not
+Import just gives you a full name of class.
+it doesnot import anything.After the entire the name is mentioned in the import for packahe that the compiler hsould look for,
+Import place only after package always.
+
+Java lang package is imported by default.
+Any class other than this needs to be imported.
+
+for documentation comment.
+/**
+
+*/
+
+static variable and static method:
+static  means it belongs to the entire class.
+class is a template or a type.
+properties or functionaliteis is given by class.
+
+constructor is used to initialise the object.
+emplyee ogj has 4 bytes. It calls a constuctor after that
+
+Every class in java ininherited from Object O.
+Thats why it is visible in Employee class.
+can assign different values to the obj. That is why obj is importnat.
+Can they are real life entities.
+Thats why they are called instance properties coz they have diff memory location and they have differnet values.
+Thy are at obj level.
+
+onlt one copy ods static is shared to all the obj of the class.
+
+per class only one static variale is there.
+
+static copy of ct eill be one. as soon as the mainapp loads even ehn the main method runs--> compiler will allocate the value for static int 4 bytes.
+Then statrt to call main method.
+class needs to be loaded in memory ant then constructor is called.
+
+It will allocate all the static var of the class,'
+
+with new keyword static var is not allocated.
+refer to static using class name.
+That value it will reflect 
+
+with ct at int== all obj has its own copy and have different obj.
+
+
+with first val obj is created as ct=0 and emp=5
+empid should not be static coz need not make a shared variable. i.r the instance property. Coz every emplyee should have its own id and is seperate.
+class name.static var name.
+
+
+static is the shared varaible coz only one copy exist and they are allocated as class varable.
+
+private members are visible int he same class. outside class it will give erroe.
+
+static method:
+
+in normal methods static method is accessible.
+non static can't be refered in static method.
+incorrect coz: empid is not allocated before.
+
+Employee obj is not creqted so empid is also not created.
+coz obj is not creaed yet.
+when stati cmethods are called chances are called that the instance are not created by that time.
+to avoid this situation static method should only show static data only,
+
+
+in order to non static object needs to be created then static variables needs to be created, then it is already present and not vise versa.
+
+non static can use static variavle
+
+when child is there father must be there(static is father)
+
+without father child can't be there.
+
+static block!
+static{
+sysout("static block");
+ct = 0;
+}
+
+
+first static blocks are run.diff static block and static method
+no need to call the static block. Statatic methods to be invoked.
+
+bit and bytes: 
+1byte = 8 bits
+int number = 45
+bits --> 0 or 1 mein convert hoga!
+8 bits to convert --> 125 to -124
+where embeded systems the memory is very less for java program. store a value to store it: int cannot be used for proper memory allocation. short has 16 bits.
+
+Ascii code has 2 byte for character in c programming.
+0 to 256 ascii range
+unicode for more than 256 then 2 bytes are required.
+
+for float 1.2f
+
+Some type of casting is not posible.
+b= false;
+int noc = (int)b;
+compatible types can be casted.
+char is primitive and string can't be casted to char.
+
+cannot convert from double to int.
+loss od data is caused.
+int b = (int) d(which is double).(coorect
+int b = d(which is double)
+
+double to int gives error.
+type: java docs 1.8  vv Important!!!
+
+for every primitive type there is a corresponding wrqqapper class.
+
+double to byte long int short, string.
+coz while casting we loose data.
+so for casting we use wrapper classes.
+All the wrrapper java.lang.number is exteded from this.
+
+Can assign primitive to object. 
+Converting a primitive to its object ype is auto boxing!.
+
+
+convert from double to int.
+Double db = d; // Double db = new Doible(d);
+int num = db.intValue()
+String v = db.toString()
+byte b = db.byteValue();
+
+can avoid casting errors as well.
+casting or wrappers for concersion.
+
+refernce have multiple values. collection of 2 to 3 primitives together.
+
+offset address?
+can't see or cahnge address in console.
+accesss obj properties using that address.
+
+equals. --> if the objs are meaningfully equal.
+two refernces are pointing to the same memoery location or not.
+
+
+
+
+
+
+
+
+
+

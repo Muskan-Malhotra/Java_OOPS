@@ -1,0 +1,194 @@
+Strings:::
+s = "fname"
+Strings are considered as immutable in java.
+We can't modify it.
+(s + "abc") --> there are three objects here which are created.
+
+The strings are immutable so new object is created and then added it as concatenation.
+modification can be anything __ uppercase, lowercase or concat.
+
+need to assign the sm obj to the refrence.
+s=s+"abc // the new obj got created;
+
+//assigning obj back to refrence 
+s obj was pointing to old one fname and then we made it point to the new obj. Refrnc linka t a tym pt to a single obj at a tym.
+New address gets overriden.
+The old string is eligible for garbage collection.
+New When there is no live refrence pointing to it then it gets for the garbage collection.
+
+How is it possible to connect to diff 
+it is becoz the jdbc architecture esa hai.
+jdbc has all interfaces..so the implmentaition class swappable hai.(connection interface hai)
+Oracle hai implemntation ka interface ke like jo bhi hai oracle yah mysql toh wo uss db se connect kar dega.
+
+Interface is like a service. And implementation to those classes are service providers.
+
+
+In java.sql all interfaces are there__< click on connection interface. find get connection method()
+
+galt driver class se galt tpe se connect karega.
+
+
+
+pehle humne assign nahi kiya tha jo refrence bana tha use hume kisi refrenc ko assign hi nahi kiya tha.
+
+if we want both the obj old and new then refrence both the objects differnetly.
+
+String s="ABC"
+String s1 = s+"Gupta"
+ABC, Gupta and ABC Gupta toh teen ban rahe hain
+Gupta ko khali live refrnc nhi hai.
+Agar s mein daal dete nancy gupta ko ko toh 2 hojate garbage ke liye nancey abnd gutpta .
+nancy gupta ke paas h refrence
+So Gupta string is eligible for garbage collection.
+
+pehle line ke obj ka refrence update hogya toh uska purana walla garbage collection pe chal gya
+
+eg: Employee e1 = new Employee("Raj",101,2000.0)
+e1 = new new Employee("Raj",101,2000.0);
+
+toh yahan 1 obj hai garbage collecton ke liye
+
+or agar esa hota toh!!
+Employee e1 = new Employee("Raj",101,2000.0)
+Employee e12 = new Employee("Raj",101,2000.0)
+Toh zero refrences for garbage collection.
+
+If modifications are done 30-40 times. so utne obj ban jayenge toh uss case mein use string builder taki har modificaton pe new obj na bane..
+
+String Builder is mutable: It has similar methods like string.
+concat in SB is m=possible with append.
+for evey append the string modifies but it does not creat e the object.
+
+Call tostring method to get the original string back,
+
+String Buffer was used before java 5. Thy are synchronised/
+the string builder was added since java version 5.\
+
+What is synchronization.
+Multi tasking: Multi-threading: Execution happening simultaneously.
+
+If method not synchronised: toh mal-execution ho jayega.
+So to avoid that method jab program multithread hai toh synchronization kineed hai 
+nhi toh nhi hai.
+
+
+When single seq of execution toh stirng builder. Method runs faster in SBuilder.
+Synch method is a bit slow..mutlithread evn and two threads are invoking string buffer methods then go for string buffer.
+
+__________________Wrapper classes______________
+int -> Integer
+float -> Float
+double -> Double
+byte ->  Byte
+short --> Short
+
+Two reasons why wrapper classes are imp:
+1) Collections: (Auto boxing and unboxing are implcitly doen!!)
+Iske classes primitive type accept nhi karte. toh kyuki wo obj type hote hain.
+
+int 4 will be converted to new Integer(4) 
+Autoboxing--> java1.5
+al.get(0) --> auto unboxing--> we get integer obj to a primitive int.
+
+2)It convert String to integer or vice versa or Any kind of conversions.--> relevant methods.
+
+Relevant methods:
+String s="10"; //if had space[s=" 10"] then jab parseint se jayega toh trim karna hoga!! 
+int num = Integer.parseint(s);
+
+trim() leading and trailing spaces are removed.
+
+
+Now Opposite ()
+primitive to string
+double d = 12.5;
+String d1 = d.tostring not possible coz d is primitive type;
+//solution
+Double dd = d; //So box primitive to its wrapper type.
+String d1 = dd.toString();
+
+SOP(d1+"0.5");
+
+radix method: Shift to hexadecimal.
+
+______________JDBC(V Imp)_______________________________
+Java DataBase.
+used for Data Storage.
+2 important things.
+There are not multiple db.
+Java Program is on local machine. (client)
+machine--> database server.(Server)
+sql,ddl,dml queries.
+Role of jvm.: 
+Java code karenge interface uses karke concreteclasses se--> fir wo jvm pe jayega and saari implementation driver class ke pass jayenge. 
+Implmentation ke classes interfaces mein use karne ke liye aate ate hain driver class se.
+My sql db hai toh mysql vendor dega mysql connection.
+
+Java program + java library(which will have interfaces) + sql queries (yeh walli we will code) iska external jar file se content ayega. Need to add this jar file. To get the implemntation.(java sql calls)__> they are fired to vendor layer (after this it will convert java jdbc call to db calls) which in turn goes to db layer
+
+If oracle hai toh jar will be oracle type.
+
+return se bhi db language se convert hoga to jdbc call.
+
+Use same applicaion to connect to diff dbs. Isiliye driver layer in imp.
+Taki oracle jar se mysql jar mein isiliye convert ho jaye. This makes is easy to convert. 
+Java code remains same just the jar  changes. Making it independant for the db connections.
+
+This is the diff in the collection coz wahan jar file add nahi karni pdti thi.
+
+Middle layer is platform dependant and 80% of the program remains independant.
+
+
+_____Prepare Statement ______________
+setInt(1,2) --> first question mark value.
+Differnce between statement and preparedStatement.
+VVVVVVVVVVVVVVVVV IIIIMMMMPPPPPPP
+
+PS: mein compile karke rakhta hai parsing and compilation avoid kar deta hai..usse progm fastr hota hai baar baar compile nhi karna hota.
+2)User apni side se input de sakta hai. Bind kar sakte hai value. Set methods are only available in prepared statement object.
+
+before closing the connection: commit changes.
+
+JDBC Code_______________
+class.forname is used to get the driver name taki load kar sake and use kar skaein.
+Yeh class ke louye search karega or java lib mein search karega toh nahi milega.
+Driver interface java lib ka part hai but uska implementation class middle layer se ata hai vendor layer sse..jo jar file se ayega.
+
+
+instacne create karega or connection mangega on our behalf.
+
+Class load exception agar jar file nhi daali toh class not found excepiton a jayega. toh exception handle karna padega.
+
+Step1= Register driver class with driver manager.
+
+runtime pe register karne ke liye runtym pe load karna pdega..
+
+Step2 = Ask sql connection to driver manager.
+
+ExecuteQuery() and createStatement() will actually 
+iske left side interface hai toh right side se kya return karega??
+
+Yeh dono function actually object return karte hain uss class ka jinhone inhe implement kiya hai.
+yeh jar mein milega.
+implmentation class can be assigned to a interface refernce.
+
+new bolke class ka naam nhi banaya kyuki class name change hota rahega depending upon db.
+yeh query fire karke obj return kar dega jiski class banane ki load humein nhi leni hai. 
+
+Ab yeh db inpendant ban gya. jdbc architecture db vendor independant hota hai. bvvvvvv imp.
+basic interfaces are imp here ece query and result set.
+
+
+now url: mainprotocol:sub_protocol:url--?url/dbname(resapi)
+
+commit is important in worbench to same the data even in ubrupt closer.
+
+
+
+
+
+
+
+
+
